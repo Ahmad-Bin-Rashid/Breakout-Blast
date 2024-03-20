@@ -1,0 +1,10 @@
+C:\Users\HP\Desktop\mine\OOP\Simple-Breakout-Game\Breakout-Blast\Breakout-Blast\bin\Debug\Breakout-Blast.exe.config
+C:\Users\HP\Desktop\mine\OOP\Simple-Breakout-Game\Breakout-Blast\Breakout-Blast\bin\Debug\Breakout-Blast.exe
+C:\Users\HP\Desktop\mine\OOP\Simple-Breakout-Game\Breakout-Blast\Breakout-Blast\bin\Debug\Breakout-Blast.pdb
+C:\Users\HP\Desktop\mine\OOP\Simple-Breakout-Game\Breakout-Blast\Breakout-Blast\obj\Debug\Breakout-Blast.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\mine\OOP\Simple-Breakout-Game\Breakout-Blast\Breakout-Blast\obj\Debug\Breakout_Blast.Form1.resources
+C:\Users\HP\Desktop\mine\OOP\Simple-Breakout-Game\Breakout-Blast\Breakout-Blast\obj\Debug\Breakout_Blast.Properties.Resources.resources
+C:\Users\HP\Desktop\mine\OOP\Simple-Breakout-Game\Breakout-Blast\Breakout-Blast\obj\Debug\Breakout-Blast.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\mine\OOP\Simple-Breakout-Game\Breakout-Blast\Breakout-Blast\obj\Debug\Breakout-Blast.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\mine\OOP\Simple-Breakout-Game\Breakout-Blast\Breakout-Blast\obj\Debug\Breakout-Blast.exe
+C:\Users\HP\Desktop\mine\OOP\Simple-Breakout-Game\Breakout-Blast\Breakout-Blast\obj\Debug\Breakout-Blast.pdb
