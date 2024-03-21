@@ -42,12 +42,12 @@ namespace Breakout_Blast
             ResultLb.Text = "";
             ResultLb.Visible = false;
             PlayAgainMsg.Visible = false;
-            Ball.Left = 400;
-            Ball.Top = 350;
+            Ball.Left = 250;
+            Ball.Top = 300;
             Player.Left = 370;
             Player.Top = 505;
             PlaceBlocks();
-            GameTimer.Start();
+            PressSpaceMsg();
         }
 
 
@@ -89,15 +89,15 @@ namespace Breakout_Blast
 
             if (Ball.Bounds.IntersectsWith(Player.Bounds))
             {
-                bally = -rnd.Next(5, 10);
+                bally = -rnd.Next(3, 10);
 
                 if (ballx < 0)
                 {
-                    ballx = -rnd.Next(3, 8);
+                    ballx = -rnd.Next(3, 10);
                 }
                 else
                 {
-                    ballx = rnd.Next(3, 8);
+                    ballx = rnd.Next(3, 10);
                 }
             }
 
@@ -144,7 +144,21 @@ namespace Breakout_Blast
             }
             if(e.KeyCode == Keys.Enter)
             {
+                GameOver(Color.LightGreen, "Congratulations! You Win !!");
                 InitializeGame();
+            }
+            if (e.KeyCode == Keys.Space)
+            {
+                if (GameTimer.Enabled)
+                {
+                    GameTimer.Stop();
+                    PressSpaceMsg();
+                }
+                else
+                {
+                    GameTimer.Start();
+                    ResultLb.Visible = false;
+                }
             }
         }
 
@@ -166,7 +180,7 @@ namespace Breakout_Blast
 
             int x = 0;
             int top = 50;
-            int left = 90;
+            int left = 70;
 
             for (int i = 0; i < blocks.Length; i++)
             {
@@ -174,7 +188,7 @@ namespace Breakout_Blast
                 {
                     x = 0;
                     top += 50;
-                    left = 90;
+                    left = 70;
                 }
                 blocks[i] = new PictureBox();
                 blocks[i].Name = "Blocks";
@@ -210,6 +224,12 @@ namespace Breakout_Blast
             GameTimer.Stop();
         }
 
+        private void PressSpaceMsg()
+        {
+            ResultLb.Text = "Press Space to Start / Stop...";
+            ResultLb.ForeColor = Color.Blue;
+            ResultLb.Visible = true;
+        }
 
     }
 }

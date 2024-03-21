@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ScoreLb = new System.Windows.Forms.Label();
             this.Player = new System.Windows.Forms.PictureBox();
             this.Ball = new System.Windows.Forms.PictureBox();
@@ -42,17 +43,17 @@
             // ScoreLb
             // 
             this.ScoreLb.AutoSize = true;
-            this.ScoreLb.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScoreLb.Font = new System.Drawing.Font("Colonna MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ScoreLb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ScoreLb.Location = new System.Drawing.Point(676, 17);
             this.ScoreLb.Name = "ScoreLb";
-            this.ScoreLb.Size = new System.Drawing.Size(91, 25);
+            this.ScoreLb.Size = new System.Drawing.Size(84, 22);
             this.ScoreLb.TabIndex = 0;
             this.ScoreLb.Text = "Score: 0";
             // 
             // Player
             // 
-            this.Player.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Player.BackColor = System.Drawing.Color.RosyBrown;
             this.Player.Location = new System.Drawing.Point(370, 505);
             this.Player.Margin = new System.Windows.Forms.Padding(0);
             this.Player.Name = "Player";
@@ -63,8 +64,8 @@
             // 
             // Ball
             // 
-            this.Ball.BackColor = System.Drawing.Color.Gold;
-            this.Ball.Location = new System.Drawing.Point(401, 340);
+            this.Ball.BackColor = System.Drawing.Color.SpringGreen;
+            this.Ball.Location = new System.Drawing.Point(280, 301);
             this.Ball.Name = "Ball";
             this.Ball.Size = new System.Drawing.Size(15, 15);
             this.Ball.TabIndex = 1;
@@ -104,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(796, 537);
             this.Controls.Add(this.PlayAgainMsg);
             this.Controls.Add(this.ResultLb);
@@ -112,6 +113,7 @@
             this.Controls.Add(this.Player);
             this.Controls.Add(this.ScoreLb);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
