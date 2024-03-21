@@ -33,6 +33,8 @@
             this.Player = new System.Windows.Forms.PictureBox();
             this.Ball = new System.Windows.Forms.PictureBox();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
+            this.ResultLb = new System.Windows.Forms.Label();
+            this.PlayAgainMsg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ball)).BeginInit();
             this.SuspendLayout();
@@ -41,8 +43,8 @@
             // 
             this.ScoreLb.AutoSize = true;
             this.ScoreLb.Font = new System.Drawing.Font("Elephant", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ScoreLb.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ScoreLb.Location = new System.Drawing.Point(697, 9);
+            this.ScoreLb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ScoreLb.Location = new System.Drawing.Point(676, 17);
             this.ScoreLb.Name = "ScoreLb";
             this.ScoreLb.Size = new System.Drawing.Size(91, 25);
             this.ScoreLb.TabIndex = 0;
@@ -51,7 +53,8 @@
             // Player
             // 
             this.Player.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Player.Location = new System.Drawing.Point(362, 499);
+            this.Player.Location = new System.Drawing.Point(370, 505);
+            this.Player.Margin = new System.Windows.Forms.Padding(0);
             this.Player.Name = "Player";
             this.Player.Size = new System.Drawing.Size(100, 25);
             this.Player.TabIndex = 1;
@@ -61,32 +64,60 @@
             // Ball
             // 
             this.Ball.BackColor = System.Drawing.Color.Gold;
-            this.Ball.Location = new System.Drawing.Point(402, 443);
+            this.Ball.Location = new System.Drawing.Point(401, 340);
             this.Ball.Name = "Ball";
-            this.Ball.Size = new System.Drawing.Size(20, 20);
+            this.Ball.Size = new System.Drawing.Size(15, 15);
             this.Ball.TabIndex = 1;
             this.Ball.TabStop = false;
             this.Ball.Tag = "Ball";
             // 
             // GameTimer
             // 
-            this.GameTimer.Tick += new System.EventHandler(this.gameTimerEvent);
+            this.GameTimer.Interval = 20;
+            this.GameTimer.Tick += new System.EventHandler(this.GameTimerEvent);
+            // 
+            // ResultLb
+            // 
+            this.ResultLb.AutoSize = true;
+            this.ResultLb.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultLb.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ResultLb.Location = new System.Drawing.Point(243, 226);
+            this.ResultLb.Name = "ResultLb";
+            this.ResultLb.Size = new System.Drawing.Size(139, 36);
+            this.ResultLb.TabIndex = 2;
+            this.ResultLb.Text = "You Win !!";
+            this.ResultLb.Visible = false;
+            // 
+            // PlayAgainMsg
+            // 
+            this.PlayAgainMsg.AutoSize = true;
+            this.PlayAgainMsg.Font = new System.Drawing.Font("Monotype Corsiva", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayAgainMsg.ForeColor = System.Drawing.Color.Blue;
+            this.PlayAgainMsg.Location = new System.Drawing.Point(243, 262);
+            this.PlayAgainMsg.Name = "PlayAgainMsg";
+            this.PlayAgainMsg.Size = new System.Drawing.Size(325, 36);
+            this.PlayAgainMsg.TabIndex = 2;
+            this.PlayAgainMsg.Text = "Press Enter to Play Again...";
+            this.PlayAgainMsg.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(800, 536);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.ClientSize = new System.Drawing.Size(796, 537);
+            this.Controls.Add(this.PlayAgainMsg);
+            this.Controls.Add(this.ResultLb);
             this.Controls.Add(this.Ball);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.ScoreLb);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Breakout-Blast";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyDownEvent);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyUpEvent);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownEvent);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyUpEvent);
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ball)).EndInit();
             this.ResumeLayout(false);
@@ -100,6 +131,8 @@
         private System.Windows.Forms.PictureBox Player;
         private System.Windows.Forms.PictureBox Ball;
         private System.Windows.Forms.Timer GameTimer;
+        private System.Windows.Forms.Label ResultLb;
+        private System.Windows.Forms.Label PlayAgainMsg;
     }
 }
 
